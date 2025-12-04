@@ -45,7 +45,10 @@ pipeline {
 
         stage('7516649W-S5'){
             steps {
-                echo "test stage 5"  
+		timeout(time: 15, unit: "MINUTES"){
+                input message: "Do you want to approve the deployment?", ok: 'Yes'
+		}
+		echo "7516649W-S5: Approve to continue the pipeline  
             }
         }
 
