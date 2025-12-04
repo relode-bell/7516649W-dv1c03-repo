@@ -45,9 +45,7 @@ pipeline {
 
         stage('7516649W-S5'){
             steps {
-		timeout(time: 15, unit: "MINUTES"){
                 input message: "7516649W, after checking the security reports, continue the pipeline?", ok: 'Proceed'
-		}
 		echo "7516649W-S5: Approve to continue the pipeline"  
             }
         }
