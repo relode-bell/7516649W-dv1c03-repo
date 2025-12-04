@@ -18,8 +18,12 @@ pipeline {
 
 	stage('7516649W-S3'){
             steps {
-		echo "test stage 3"
-            }
+		docker rm -f 7516649W-web-server
+		docker run -d --name 7516649W-web-server -p 32700:80 \
+		7516649W-temp-server-image apachectl -D FOREGROUND
+		
+		echo "7516649W-S3: Web Server is setup and running"
+		}
 	}
 
         stage('7516649W-S4'){
