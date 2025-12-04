@@ -30,12 +30,12 @@ pipeline {
 
         stage('7516649W-S4'){
             parallel {
-		stage('7516649W-S4A){
+		stage('7516649W-S4A'){
 			steps{
 			echo "7516649W-S4A: SQL Injection (SQLi) Test - Report Generated"
 			}	
 		}
-                stage('7516649W-S4B){
+                stage('7516649W-S4B'){
                         steps{
 			echo "7516649W-S4B: Cross-Site Scripting (XSS) Test - Report Generated"
                         }       
