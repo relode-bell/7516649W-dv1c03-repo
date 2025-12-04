@@ -15,5 +15,29 @@ pipeline {
                 echo "7516649W-S2: Release Windows checked - Continue the pipeline"
             }
         }
+
+	stage('7516649W-S3'){
+            steps {
+		echo "test stage 3"
+            }
+	}
+
+        stage('7516649W-S4'){
+            steps {
+		echo "test stage 4"
+            }
+        }
+
+        stage('7516649W-S5'){
+            steps {
+                echo "test stage 5"  
+            }
+        }
+
+        stage('7516649W-S6'){
+            steps {
+                echo "test stage 6"  
+            }
+        }
     }   
 }
