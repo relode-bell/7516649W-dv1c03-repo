@@ -48,7 +48,7 @@ pipeline {
 		timeout(time: 15, unit: "MINUTES"){
                 input message: "Do you want to approve the deployment?", ok: 'Yes'
 		}
-		echo "7516649W-S5: Approve to continue the pipeline  
+		echo "7516649W-S5: Approve to continue the pipeline"  
             }
         }
 
